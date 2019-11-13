@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  background: #224de3;
+  font-size: 62.5%;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+//header
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background: #88CCFF;
+  height: 140px;
+  border-bottom: 2px dashed white;
+
+  h1 {
+    font-size: 4rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+  }
+}
+
+//log in page form
+.loginForm {
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  height: 320px;
+
+  h1 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #224de3;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #e53e3a;
+    margin: 0;
+  }
+
+  .inputContainer {
+    padding-left: 20px;
+
+    input {
+      font-size: 1rem;
+      padding: 6px;
+      border-radius: 10px;
+    }
+  }
+
+  button {
+    margin: 20px;
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    color: #e53e3a;
+    border: 2px solid  #e53e3a;
+    border-radius: 10px;
+  }
+}
+
+
+//add friend form
+.addFriendForm {
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  height: 420px;
+
+  h1 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #224de3;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #e53e3a;
+    margin: 0;
+  }
+
+  .inputContainer {
+    padding-left: 20px;
+
+    input {
+      font-size: 1rem;
+      padding: 6px;
+      border-radius: 10px;
+    }
+  }
+
+  button {
+    margin: 20px;
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    color: #e53e3a;
+    border: 2px solid  #e53e3a;
+    border-radius: 10px;
+  }
+}
+
+//footer
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #88CCFF;
+  height: 80px;
+  border-top: 2px dashed white;
+  margin-top: 30px;
+
+  h3 {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+  }
+}
+
+//friend card
+
+// .contentContainer {
+//   display: flex;
+//   width: 100%;
+// }
+
+// .listContainer {
+//   width: 50%;
+// }
+
+.friendContainer {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+
+  h1 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #224de3;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #e53e3a;
+    margin: 0;
+  }
+}
