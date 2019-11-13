@@ -1,17 +1,32 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
-const AddFriendForm = () => {
+import { axiosWithAuth } from '../utils/axiosWithAuth'
 
+const AddFriendForm = (props) => {
+    console.log('props', props)
+    
     const [newFriend, setNewFriend] = useState({
         name: '',
         age: '',
         email: ''
     });
 
-    // const handleSubmit = e => {
-    //     e.preventDefault();
-    //     props.postFriend(name, age, email);
-    // }
+    let history = useHistory();
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        // axiosWithAuth ==> ?? an axios instance; .post() ==> ?? promise
+        axiosWithAuth()
+         .post('/api/friends', newFriend)
+         .then( res => {
+             console.log(res);
+             //redirect to main friends list
+             history.push("/friends")
+            //  props.history.push('/friends')
+         })
+         .catch( err => console.log(err));
+    }
 
     const handleChange = e => {
         setNewFriend({
@@ -23,12 +38,12 @@ const AddFriendForm = () => {
     return (
         <div className="addFriendForm">
             <h1>Add Friend</h1>
-        <form onSubmit={() => {}}>
+        <form onSubmit={handleSubmit}>
         <div className="fieldContainer">
             <div className="name">
               <label htmlFor="name"><h3>Name</h3></label>
               <div className="inputContainer">
-                <input onChange={handleChange} type="text" name="name" placeholder="Friend Name" size="30"/>
+                <input onChange={handleChange} type="text" name="name" value={newFriend.name} placeholder="Friend Name" size="30"/>
               </div>
             </div>
         </div>
@@ -36,7 +51,7 @@ const AddFriendForm = () => {
             <div className="age">
               <label htmlFor="age"><h3>Age</h3></label>
               <div className="inputContainer">
-                <input onChange={handleChange} type="text" name="age" placeholder="Friend Age" size="30"/>
+                <input onChange={handleChange} type="text" name="age" value={newFriend.age} placeholder="Friend Age" size="30"/>
               </div>
             </div>
         </div>
@@ -44,7 +59,7 @@ const AddFriendForm = () => {
             <div className="email">
               <label htmlFor="email"><h3>Email</h3></label>
               <div className="inputContainer">
-                <input onChange={handleChange} type="email" name="email" placeholder="Friend email" size="30"/>
+                <input onChange={handleChange} type="email" name="email" value={newFriend.email} placeholder="Friend email" size="30"/>
               </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth'
 
 
-const LoginPage = () => {
+const LoginPage = (props) => {
 
     const [user, setUser] = useState({
         username: '',
@@ -21,9 +21,14 @@ const LoginPage = () => {
         e.preventDefault();
         // axiosWithAuth ==> ?? an axios instance; .post() ==> ?? promise
         axiosWithAuth().post('/api/login', user)
-         .then( res => console.log(res))
+         .then( res => {
+             console.log(res);
+             localStorage.setItem('token', res.data.payload)
+             //redirect to main page
+             console.log('props', props)
+             props.history.push('/friends')
+         })
          .catch( err => console.log(err));
-
     }
 
     return (

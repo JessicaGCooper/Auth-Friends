@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import LoginPage from './LoginPage'
-// import AddFriendForm from './AddFriendForm';
+import AddFriendForm from './AddFriendForm';
 import FriendList from './FriendList';
-// import Navigation from './Navigation'
+import PrivateRoute from './PrivateRoute'
 
 function App() {
   return (
@@ -15,8 +15,9 @@ function App() {
         <h3>list Your Frenemies</h3>
       </header>
       <Switch>
-        <Route path='/' component={LoginPage} />
-        <Route exact path='/friends' component={FriendList} />
+        <Route exact path='/' component={LoginPage} />
+        <PrivateRoute exact path='/friends' component={FriendList} />
+        <PrivateRoute exact path='/friends/add' component={AddFriendForm} />
       </Switch>    
       <footer>
         <h3>keep your frenemies close</h3>
@@ -27,13 +28,3 @@ function App() {
 }
 
 export default App;
-
-
-      {/* <footer>
-        <h3>keep your frenemies close</h3>
-      </footer>
-
-      <header className="App-header">
-        <h1>Fake Friends</h1>
-        <h3>list Your Frenemies</h3>
-      </header>  */}

@@ -157,6 +157,7 @@ footer {
   height: 80px;
   border-top: 2px dashed white;
   margin-top: 30px;
+  margin-bottom: 0;
 
   h3 {
     font-size: 1rem;
@@ -164,6 +165,26 @@ footer {
     color: white;
     margin: 0;
   }
+}
+
+//friend list
+.friendsList {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  h2 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
 }
 
 //friend card
@@ -188,7 +209,7 @@ footer {
     border-radius: 10px;
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     color: #224de3;
     text-align: center;
@@ -196,7 +217,7 @@ footer {
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding-left: 20px;
     padding-bottom: 20px;
     font-family: 'Poppins', sans-serif;
