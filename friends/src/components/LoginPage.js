@@ -44,6 +44,7 @@ const LoginPage = (props) => {
                         name="username"
                         value={user.username}
                         onChange={handleChange}
+                        required
                     />
                 </div>
             </div>
@@ -57,6 +58,7 @@ const LoginPage = (props) => {
                         name="password"
                         value={user.password}
                         onChange={handleChange}
+                        required
                     />
                 </div>
             </div>

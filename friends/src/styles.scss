@@ -185,6 +185,18 @@ footer {
     text-transform: uppercase;
   }
 
+  .buttonContainer {
+
+    button {
+      margin: 0;
+      font-size: 1.25rem;
+      font-family: 'Poppins', sans-serif;
+      color: #e53e3a;
+      border: 2px solid  #e53e3a;
+      border-radius: 10px;
+    }
+  }
+
 }
 
 //friend card

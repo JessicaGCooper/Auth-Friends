@@ -43,7 +43,7 @@ const AddFriendForm = (props) => {
             <div className="name">
               <label htmlFor="name"><h3>Name</h3></label>
               <div className="inputContainer">
-                <input onChange={handleChange} type="text" name="name" value={newFriend.name} placeholder="Friend Name" size="30"/>
+                <input onChange={handleChange} type="text" name="name" value={newFriend.name} placeholder="Friend Name" size="30" required/>
               </div>
             </div>
         </div>
@@ -51,7 +51,7 @@ const AddFriendForm = (props) => {
             <div className="age">
               <label htmlFor="age"><h3>Age</h3></label>
               <div className="inputContainer">
-                <input onChange={handleChange} type="text" name="age" value={newFriend.age} placeholder="Friend Age" size="30"/>
+                <input onChange={handleChange} type="text" name="age" value={newFriend.age} placeholder="Friend Age" size="30" required/>
               </div>
             </div>
         </div>
@@ -59,7 +59,7 @@ const AddFriendForm = (props) => {
             <div className="email">
               <label htmlFor="email"><h3>Email</h3></label>
               <div className="inputContainer">
-                <input onChange={handleChange} type="email" name="email" value={newFriend.email} placeholder="Friend email" size="30"/>
+                <input onChange={handleChange} type="email" name="email" value={newFriend.email} placeholder="Friend email" size="30" required/>
               </div>
             </div>
         </div>
