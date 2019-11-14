@@ -12,13 +12,15 @@ function App() {
       <div className="App">
       <header className="App-header">
         <h1>Fake Friends</h1>
-        <h3>list Your Frenemies</h3>
+        <h3>List Your Frenemies</h3>
       </header>
+      <div className='main'>
       <Switch>
         <Route exact path='/' component={LoginPage} />
         <PrivateRoute exact path='/friends' component={FriendList} />
         <PrivateRoute exact path='/friends/add' component={AddFriendForm} />
-      </Switch>    
+      </Switch>
+      </div>    
       <footer>
         <h3>keep your frenemies close</h3>
       </footer>

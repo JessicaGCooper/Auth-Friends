@@ -64,7 +64,7 @@ const LoginPage = (props) => {
             </div>
         </div>
         <div className="formButtonContainer">
-          <button>Log in</button>
+          <button>Log In</button>
         </div>
         </form>
       </div>

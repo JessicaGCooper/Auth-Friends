@@ -1,18 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
+//begin main styling
+
+
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   background: #224de3;
   font-size: 62.5%;
-}
-
-.appContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+ height: 100vh;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 //header
@@ -90,7 +105,15 @@ header {
     color: #e53e3a;
     border: 2px solid  #e53e3a;
     border-radius: 10px;
+
+    &:hover {
+      color: white;
+      border: 2px solid #224de3;
+      background: #224de3;
+      transform: scale(1.1);
+    }
   }
+
 }
 
 
@@ -157,7 +180,7 @@ footer {
   height: 80px;
   border-top: 2px dashed white;
   margin-top: 30px;
-  margin-bottom: 0;
+
 
   h3 {
     font-size: 1rem;
@@ -200,15 +223,6 @@ footer {
 }
 
 //friend card
-
-// .contentContainer {
-//   display: flex;
-//   width: 100%;
-// }
-
-// .listContainer {
-//   width: 50%;
-// }
 
 .friendContainer {
     width: 30%;
