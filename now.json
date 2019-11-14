@@ -8,5 +8,5 @@
         "config": { "distDir": "build" }
       }
     ],
-    "routes": [{ "src": "/(.*)", "dest": "friends/$1" }]
+    "routes": [{ "src": "/(.*)", "dest": "/friends/$1" }]
   }
